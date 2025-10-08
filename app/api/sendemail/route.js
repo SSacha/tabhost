@@ -12,12 +12,16 @@ export async function POST(req) {
   });
 
   const mailOptions = {
-    from: email,
+    from: "sachasoumaille1@gmail.com",      // toujours ton adresse ici
+    replyTo: email,                         // 👉 l’adresse de la personne
     to: "sachasoumaille1@gmail.com",
     subject: `Nouveau message de ${name}`,
-    text: message,
+    text: `
+      Nom: ${name}
+      Email: ${email}
+      Message: ${message}
+  `,
   };
-
   try {
     await transporter.sendMail(mailOptions);
     return new Response("OK", { status: 200 });

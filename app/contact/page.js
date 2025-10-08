@@ -30,9 +30,10 @@ export default function Contact() {
   return (
     <>
       <Navbar />
-      <main className="max-w-lg mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold mb-4">Contact</h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
+      <main className="flex flex-col w-full justify-center items-center px-4 py-12">
+        <h1 className="text-3xl mx-perso font-bold mb-4">Contactez-nous</h1>
+        <p className="mx-perso px-4 py-4 mb-4 text-align-center " >Via ce formulaire je vous répondrai dés que possible, n'hésitez pas à laisser vos coordonnées</p>
+        <form onSubmit={handleSubmit} className="mx-perso space-y-4">
           <input
             name="name"
             placeholder="Nom"
@@ -58,12 +59,27 @@ export default function Contact() {
             className="w-full border p-2 rounded h-32"
             required
           ></textarea>
-          <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          <button type="submit" className="button-send px-4 py-2 rounded">
             Envoyer
           </button>
         </form>
-        {status && <p className="mt-4 text-sm">{status}</p>}
+        {status && <p className=" mx-perso mt-4 text-sm">{status}</p>}
+
+        <p className="text-2xl mx-perso px-4 py-4 mb-4 text-align-center " >Ou bien directement par :<br></br>
+          Téléphone : <span className="font-bold">(+33) 06 46 43 32 91</span><br></br>
+          Email : <span className="font-bold">tabandhost@gmail.com</span><br></br>
+          Instagram : <a className="font-bold contact-a" href="https://www.instagram.com/tabandhost">@tabandhost</a><br></br>
+          Adresse : 70 rue Ligier, 33000 Bordeaux<br></br>
+        </p>
+        <p className="text-2xl font-bold mx-perso px-4 py-4 mb-4 text-align-center " >
+          Vous cherchez à maximiser la rentabilité et la gestion de votre bien ? <br></br>
+          Contactez-nous dès aujourd’hui pour une solution clé en main !
+        </p>
+        
+
       </main>
+
+
       <Footer />
     </>
   );

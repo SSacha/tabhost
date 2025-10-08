@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8f1d7;
+  --foreground: #373435;
+  --color-bg: #c0ae8a;
 }
 
 @theme inline {
@@ -22,5 +23,104 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: larger;
+}
+
+header, footer {
+  background-color: var(--color-bg);
+  font-weight: 400;
+  font-size: x-large;
+}
+.button-send {
+  background-color: var(--foreground); /* couleur par défaut */
+  color: white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.button-send:hover {
+  cursor: pointer;
+  color: var(--foreground);
+  background-color: var(--color-bg);
+}
+a:hover {
+  color: #eee;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.contact-a:hover {
+  color: darksalmon;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.text-align-center {
+  text-align: center;
+}
+.fds-big {
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.7));
+}
+
+.fds-super-small {
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.6));
+}
+
+.fds-small {
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
+}
+
+.fds-small-str {
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 1));
+}
+
+.separator {
+  height: 200px;
+  background-color: var(--color-bg);
+}
+
+.mx-perso {
+  margin: 0 20%;
+}
+li {
+  margin: 1rem 0;
+}
+.custom-list li {
+  list-style: none;            /* enlève les puces par défaut */
+  position: relative;
+  padding-left: 1rem;          /* espace pour le point */
+  margin: 1rem 0;
+}
+
+.custom-list li::before {
+  content: "•";                /* le point */
+  color: #000;                 /* couleur du point */
+  font-size: 20px;             /* taille du point */
+  line-height: 1;
+  margin-right: 1rem;
+}
+
+@media (max-width: 700px) {
+  body, p {
+    font-size: 14px;
+  }
+  h1, h2 {
+    font-size: 18px;
+  }
+  .mx-perso {
+    margin: 0 5%;
+  }
+  footer {
+    display: none;
+  }
+}
+
+@media (max-width: 1250px) {
+  body, p {
+    font-size: 18px;
+  }
+  h1, h2 {
+    font-size: 22px;
+  }
+  .mx-perso {
+    margin: 0 10%;
+  }
+  footer {
+    display: none;
+  }
 }
