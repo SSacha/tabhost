@@ -1,34 +1,51 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Separator from "./components/Separator";
+import BlocAccueil from "./components/BlocAccueil";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <main className="flex flex-col w-full ">
-        <h1 className="text-3xl  mx-perso px-4 py-12 font-bold mb-2">Pourquoi choisir notre conciergerie ?</h1>
-        <p className="text-2xl mx-perso px-4 py-4 mb-4"> Vous êtes propriétaire d'un appartement destiné à la location saisonnière ou à long terme ? Confiez sa gestion à des experts qui
-          s'occupent de tout, de l’accueil de vos invités à l'entretien de votre bien. Notre conciergerie vous offre une solution clé en main pour
-          maximiser votre rentabilité et garantir la satisfaction de vos hôtes.</p>
-          <Separator />
-        <h2 className="text-3xl  mx-perso px-4 py-4 font-bold mb-4" >Nos Services</h2>
-        <p className="text-2xl mx-perso px-4 py-4 mb-4" >Gestion des réservations :</p>
-        <ul className="custom-list mx-perso px-4 mb-4">
-          <li>Prise en charge des réservations via les principales
-            plateformes (Airbnb, Booking, etc.)</li>
-          <li>Optimisation des tarifs en fonction de la demande</li>
-          <li>Communication avec les locataires avant, pendant et après
-            leur séjour</li>
-        </ul>
-        
-        <p className="text-2xl mx-perso px-4 py-4 mb-4" >Accueil des hôtes :</p>
-        <ul className="custom-list mx-perso px-4 mb-4">
-          <li>Remise des clés et présentation de l’appartement</li>
-          <li>Disponibilité pour répondre aux questions ou demandes
-            spéciales des locataires</li>
-          <li>Assistance 24/7 en cas d’urgence</li>
-        </ul>
+        <div className="w-full">
+          <Image src={'/place-bourse-photo.jpg'} alt={'bourse'} width={1920} height={1000} />
+        </div>
+        <div className="flex flex-col accueil-container-title justify-center items-center font-bold">
+          <h1 className="text-3xl  px-4 py-12 mb-2">Pourquoi choisir notre conciergerie ?</h1>
+          <p className="text-2xl w-full px-4 py-4 mb-4"> Vous êtes propriétaire d'un appartement destiné à la location saisonnière ou à long terme ? Confiez sa gestion à des experts qui
+            s'occupent de tout, de l’accueil de vos invités à l'entretien de votre bien. Notre conciergerie vous offre une solution clé en main pour
+            maximiser votre rentabilité et garantir la satisfaction de vos hôtes.</p>
+        </div>
+
+        {/* <Separator /> */}
+        <h2 className="text-3xl flex justify-center items-center mx-perso pb-8 font-bold pt-8 to-uppercase" >Nos Services</h2>
+        <div className="flex flex-row width-60 h-80 justify-space-evenly mx-perso items-center my-4">
+          <BlocAccueil
+            titre="Gestion des réservations"
+            contenu={
+              <ul className="custom-list px-4 mb-4 text-base font-normal">
+                <li>Prise en charge des réservations via les principales plateformes (Airbnb, Booking, etc.)</li>
+                <li>Optimisation des tarifs en fonction de la demande</li>
+                <li>Communication avec les locataires avant, pendant et après leur séjour</li>
+              </ul>
+            }
+          />
+          <BlocAccueil
+            titre="Accueil des hôtes"
+            contenu={
+              <>
+                {/* <p className="text-2xl mx-perso px-4 py-4 mb-4 font-semibold">Accueil des hôtes :</p> */}
+                <ul className="custom-list  px-4 mb-4 text-base font-normal">
+                  <li>Remise des clés et présentation de l’appartement</li>
+                  <li>Disponibilité pour répondre aux questions ou demandes spéciales des locataires</li>
+                  <li>Assistance 24/7 en cas d’urgence</li>
+                </ul>
+              </>
+            }
+          />
+        </div>
 
         <p className="text-2xl mx-perso px-4 py-4 mb-4" >Entretien de l'appartement :</p>
         <ul className="custom-list mx-perso px-4 mb-4">
@@ -37,7 +54,7 @@ export default function Home() {
           <li>Vérification des équipements et réapprovisionnement
             (savons, produits ménagers, etc.)</li>
         </ul>
-        
+
 
         <p className="text-2xl mx-perso px-4 py-4 mb-4" >Maintenance et réparations :</p>
         <ul className="custom-list mx-perso px-4 mb-4">
@@ -48,7 +65,7 @@ export default function Home() {
           <li>Contrôle des installations de sécurité</li>
         </ul>
 
-        
+
         <p className="text-2xl mx-perso px-4 py-4 mb-4" >Optimisation de l’expérience hôte :</p>
         <ul className="custom-list mx-perso px-4 mb-4">
           <li>Fourniture d’informations locales (restaurants, transports,

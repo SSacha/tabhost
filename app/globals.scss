@@ -1,0 +1,21 @@
+
+/* Define a SCSS mixin to generate width classes */
+@mixin width-classes {
+  @for $i from 0 through 100 {
+    .width-#{$i} {
+      width: #{$i} + "%";
+    }
+  }
+}
+/* Define a SCSS mixin to generate width classes */
+@mixin height-classes {
+  @for $i from 0 through 100 {
+    .h-#{$i} {
+      min-height: #{$i} + "%";
+    }
+  }
+}
+
+/* Use the mixin to generate width classes */
+@include width-classes;
+@include height-classes;

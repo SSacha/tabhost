@@ -27,6 +27,10 @@ body {
   font-size: larger;
 }
 
+h1, h2 {
+  letter-spacing: 1.5px;
+}
+
 header, footer {
   background-color: var(--color-bg);
   font-weight: 400;
@@ -73,7 +77,29 @@ a:hover {
   height: 200px;
   background-color: var(--color-bg);
 }
-
+.accueil-container-title {
+  position: absolute;
+  left: 20%;
+  top: 200px;
+  width: 60%;
+  height: 500px;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  /* background-color: rgba(255,255,255,0.6); */
+  /* background-image: url('/public/place-bourse-photo.jpg'); */
+  text-align: justify;
+}
+.bloc-accueil {
+  background-color: var(--color-bg);
+  /* color: white; */
+  /* text-shadow: 2px 2px 4px black; */
+}
+.justify-space-evenly {
+  justify-content: space-evenly;
+}
+.to-uppercase {
+  text-transform: uppercase;
+}
 .mx-perso {
   margin: 0 20%;
 }
