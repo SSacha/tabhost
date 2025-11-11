@@ -27,36 +27,45 @@ body {
   font-size: larger;
 }
 
-h1, h2 {
+h1,
+h2 {
   letter-spacing: 1.5px;
 }
 
-header, footer {
+header,
+footer {
   background-color: var(--color-bg);
   font-weight: 400;
   font-size: x-large;
 }
+
 .button-send {
-  background-color: var(--foreground); /* couleur par défaut */
+  background-color: var(--foreground);
+  /* couleur par défaut */
   color: white;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 .button-send:hover {
   cursor: pointer;
   color: var(--foreground);
   background-color: var(--color-bg);
 }
+
 a:hover {
   color: #eee;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 .contact-a:hover {
   color: darksalmon;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 .text-align-center {
   text-align: center;
 }
+
 .fds-big {
   filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.7));
 }
@@ -77,76 +86,128 @@ a:hover {
   height: 200px;
   background-color: var(--color-bg);
 }
+
 .accueil-container-title {
   position: absolute;
-  left: 20%;
-  top: 200px;
-  width: 60%;
+  left: 5%;
+  top: 100px;
+  width: 90%;
   height: 500px;
-  color: white;
-  text-shadow: 2px 2px 4px black;
+  color: #373435;
+  /* text-shadow: 2px 2px 4px black; */
   /* background-color: rgba(255,255,255,0.6); */
   /* background-image: url('/public/place-bourse-photo.jpg'); */
   text-align: justify;
+  text-transform: uppercase;
 }
+
 .bloc-accueil {
   background-color: var(--color-bg);
+  color: #373435;
   /* color: white; */
   /* text-shadow: 2px 2px 4px black; */
 }
+
 .justify-space-evenly {
   justify-content: space-evenly;
 }
+
 .to-uppercase {
   text-transform: uppercase;
 }
+
 .mx-perso {
-  margin: 0 20%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
+
+p {
+  font-size: 20px;
+}
+
 li {
   margin: 1rem 0;
 }
+
+.font-italic {
+  font-style: italic;
+}
+
 .custom-list li {
-  list-style: none;            /* enlève les puces par défaut */
+  list-style: none;
+  /* enlève les puces par défaut */
   position: relative;
-  padding-left: 1rem;          /* espace pour le point */
+  padding-left: 1rem;
+  /* espace pour le point */
   margin: 1rem 0;
 }
 
 .custom-list li::before {
-  content: "•";                /* le point */
-  color: #000;                 /* couleur du point */
-  font-size: 20px;             /* taille du point */
+  content: "•";
+  /* le point */
+  color: var(--foreground);
+  /* couleur du point */
+  font-size: 20px;
+  /* taille du point */
   line-height: 1;
   margin-right: 1rem;
 }
 
 @media (max-width: 700px) {
-  body, p {
+
+  body,
+  p,
+  .custom-list {
     font-size: 14px;
   }
-  h1, h2 {
+
+  .accueil-container-title {
+    display: flex;
+    position: unset;
+    width: 100%;
+    /* color: white; */
+    /* text-shadow: 2px 2px 4px black; */
+    /* background-color: rgba(255,255,255,0.6); */
+    /* background-image: url('/public/place-bourse-photo.jpg'); */
+
+  }
+
+  h1,
+  h2, .text-2xl {
     font-size: 18px;
   }
-  .mx-perso {
-    margin: 0 5%;
+
+  .title-bloc-accueil {
+    text-align: center;
   }
+
+  .mx-perso {
+
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
   footer {
     display: none;
   }
 }
 
-@media (max-width: 1250px) {
-  body, p {
+@media (max-width: 1280px) {
+
+  body,
+  p,
+  .custom-list {
     font-size: 18px;
   }
-  h1, h2 {
+
+  h1,
+  h2 {
     font-size: 22px;
   }
+
   .mx-perso {
-    margin: 0 10%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
-  footer {
-    display: none;
-  }
+
 }

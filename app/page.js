@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Separator from "./components/Separator";
 import BlocAccueil from "./components/BlocAccueil";
+import BlocAccueilSeul from "./components/BlocAccueilSeul";
 import Image from "next/image";
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
 
         {/* <Separator /> */}
         <h2 className="text-3xl flex justify-center items-center mx-perso pb-8 font-bold pt-8 to-uppercase" >Nos Services</h2>
-        <div className="flex flex-row width-60 h-80 justify-space-evenly mx-perso items-center my-4">
+        <div className="flex flex-row bloc-accueil-w h-80 justify-space-evenly mx-perso items-center mb-4">
           <BlocAccueil
             titre="Gestion des réservations"
             contenu={
@@ -46,33 +47,49 @@ export default function Home() {
             }
           />
         </div>
+        <div className="flex flex-row bloc-accueil-w h-80 justify-space-evenly mx-perso items-center mt-4 mb-4">
+          <BlocAccueil
+            titre="Entretien de l'appartement"
+            contenu={
+              <ul className="custom-list px-4 mb-4 text-base font-normal">
+                <li>Ménage professionnel avant et après chaque séjour</li>
+                <li>Gestion des linges de maison</li>
+                <li>Vérification des équipements et réapprovisionnement
+                  (savons, produits ménagers, etc.)</li>
+              </ul>
+            }
+          />
+          <BlocAccueil
+            titre="Maintenance et réparations"
+            contenu={
 
-        <p className="text-2xl mx-perso px-4 py-4 mb-4" >Entretien de l'appartement :</p>
-        <ul className="custom-list mx-perso px-4 mb-4">
-          <li>Ménage professionnel avant et après chaque séjour</li>
-          <li>Gestion des linges de maison</li>
-          <li>Vérification des équipements et réapprovisionnement
-            (savons, produits ménagers, etc.)</li>
-        </ul>
+              <ul className="custom-list  px-4 mb-4 text-base font-normal">
+                <li>Suivi régulier de l’état de l’appartement (plomberie,
+                  électricité, etc.)</li>
+                <li>Réparation ou remplacement rapide des équipements
+                  défectueux</li>
+                <li>Contrôle des installations de sécurité</li>
+              </ul>
 
+            }
+          />
+        </div>
 
-        <p className="text-2xl mx-perso px-4 py-4 mb-4" >Maintenance et réparations :</p>
-        <ul className="custom-list mx-perso px-4 mb-4">
-          <li>Suivi régulier de l’état de l’appartement (plomberie,
-            électricité, etc.)</li>
-          <li>Réparation ou remplacement rapide des équipements
-            défectueux</li>
-          <li>Contrôle des installations de sécurité</li>
-        </ul>
+        <div className="flex flex-row bloc-accueil-w h-80 justify-space-evenly mx-perso items-center mt-4">
+          <BlocAccueilSeul
+            titre="Optimisation de l’expérience hôte"
+            contenu={
+              <ul className="custom-list px-4 mb-4 text-base font-normal">
+                <li>Fourniture d’informations locales (restaurants, transports,
+                  attractions)</li>
+                <li>Suggestions personnalisées pour améliorer l’accueil et les
+                  avis des client</li>
+              </ul>
+            }
+          />
 
+        </div>
 
-        <p className="text-2xl mx-perso px-4 py-4 mb-4" >Optimisation de l’expérience hôte :</p>
-        <ul className="custom-list mx-perso px-4 mb-4">
-          <li>Fourniture d’informations locales (restaurants, transports,
-            attractions)</li>
-          <li>Suggestions personnalisées pour améliorer l’accueil et les
-            avis des client</li>
-        </ul>
 
       </main>
       <Footer />
